@@ -10,7 +10,8 @@ git clone https://github.com/Jan-Meyer01/ExampleRepo
 ```
 
 The following are already done for this, but for a new repo the next steps would be:
-2. Copy your data from whatever folder into the repo folder called 'ExampleRepo'.
+
+2. Copy your code from whatever folder into the repo folder called 'ExampleRepo'.
 
 3. Commit your old code:
 ```
