@@ -17,6 +17,7 @@ from os import mkdir
 parser = argparse.ArgumentParser()
 parser.add_argument('-i','--input', default='data', help='folder for input')
 parser.add_argument('-o','--output', default='data', help='folder for output')
+parser.add_argument('-n','--name', default='DummyData', help='name of the data')
 args = parser.parse_args()
 
 # create relative path to folders
@@ -32,7 +33,7 @@ if not isdir(path_output):
     mkdir(path_output)
 
 # load .mat file
-data = loadmat(join(path_input,'DummyData.mat'))
+data = loadmat(join(path_input,args.name+'.mat'))
 
 # save data as .npy file (add file extension automatically!)
-np.save(join(path_output,'DummyData'), data)
+np.save(join(path_output,args.name), data)
