@@ -28,7 +28,13 @@ git push
 ```
 
 ## Git Workflow
-Next we want to look at the typical Git workflow and how we can change our code. There are a couple problems with the repo as it is now:
+Next we want to look at the typical Git workflow and how we can change our code. Before doing that, however, we will create our own branch so we do not change any of the code in the repo. This can be done with the following command (replace `name` with the your favorite branch name):
+
+```
+git checkout -b name
+```
+
+If you want to later switch between branches you can use this command without the argument `-b`. Now, there are a couple problems with the repo as it is now which we want to fix:
 
 First, the python script `DummyDataReader.py` takes in arguments for in and ouput folders, but has no argument for the file name. We firstly need to add this argument to the parser:
 
