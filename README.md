@@ -59,7 +59,11 @@ python DummyDataReader.py -n NewDummyData
 
 Note that you might need to write the exact environment instead of just python depending on your setup.
     
-Now we can follow the steps 3 and 4 from above with an appropiate commit message to save our changes.
+Now we can follow the steps 3 and 4 from above with an appropiate commit message to save our changes. Upon pushing you should get an error message saying that the branch that you want to push to does not exist on the remote. Usually git will then give you a suggestion how to fix this. In our case we can tell it to create a branch on the remote using the following extended push command (again replace `name` with your branch name):
+
+```
+git push --set-upstream origin name
+```
 
 Second, as you will have seen at the end of the last we added new data to our remote. Thus we have data in our repo, which we will keep on committing. This, however, is not optimal as our repo keeps growing and we may be unintentionally sharing sensitive data. To stop this from happening, we can create a `.gitignore` file (ideally we would have done this right at the beginning) where we put the name of the data folder and any other annoying files that might be created as a sideproduct of our coding. Our `.gitignore` would thus simply look like this:
 
